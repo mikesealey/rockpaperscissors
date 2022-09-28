@@ -5,6 +5,7 @@ function playGame() {
         if (userName == null || userName == "") {                           //Defaults to "Player" if user clicks cancel or leaves blank (respectively)
                 userName = "Player"
         }
+        console.log(userName + " has joined the game.")
 
         // Defining 1 round of Rock Paper Scissors
         function playRound() {
@@ -13,7 +14,16 @@ function playGame() {
                 let choices = ["rock", "paper", "scissors"]                         //Gives options to computer
                 let computerChoice = choices[Math.floor(Math.random() * 3 )]        //Computer choses at random
                 //let userChoice = choices[Math.floor(Math.random() * 3 )]            //For testing purposes userChoice is RNG
-                let userChoice = prompt("Rock, Paper, Scissors? \nLeave blank or click 'cancel' to forfeit.")//For actual implementation
+                let userInput = prompt("Rock, Paper, Scissors? \nLeave blank or click 'cancel' to forfeit.")
+                
+                // If an input prompt is cancelled it returns null
+                // null.toLowerCase throws an error
+                // This converts a null value to match the input if nothing is entered and OK is clicked
+                if (userInput == null) {
+                        userChoice = ""
+                } else {
+                        userChoice = userInput.toLowerCase()
+                }
 
                 // Outcomes 
                 let winMessage = `${userName} chose ${userChoice}, which beat the computer's ${computerChoice}`
@@ -45,7 +55,7 @@ function playGame() {
         } else if (userChoice == "shotgun") { //sv_cheats 1, godmode 1
                 console.log(cheatMessage)
                 userScore += 5
-        } else if (userChoice == null || userChoice == "") { // Forfeits the game if the user clicks cancel or refuses to enter a choice
+        } else if (userChoice == "") { // Forfeits the game if the user clicks cancel or refuses to enter a choice
                 alert(`${userName} forfeit the match, Computer wins.`)
                 console.log(`${userName} chose to forfeit.`)
                 computerScore += 5
