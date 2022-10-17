@@ -1,0 +1,53 @@
+
+
+html {
+    background-color: pink;
+    color: white;
+    text-align: center;
+
+
+}
+
+h1 {
+    line-height: 0.1;
+}
+
+h3 {
+    font: 1px
+}
+
+h4 {
+    line-height: 0.1;
+    font-style: italic;
+}
+
+button {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.scoreboard {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    border: 5px solid hotpink;
+    padding: 0;
+    margin: 1rem;
+    max-width: 500px;
+}
+
+.scoreboard.playerSelection {
+    text-align: right;
+    align-items: right;
+
+}
+
+.scoreboard.computerSelection {
+    flex: 1;
+    color: red;
+}
+
+.scoreboard.result {
+    text-align: center;
+    color: grey;
+}
