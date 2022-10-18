@@ -12,9 +12,10 @@
     <div id="selection">
         <button onclick="playRound(`rock`)">Rock</button>
         <button onclick="playRound(`paper`)">Paper</button>
-        <button onclick="playRound(`scissors`)">Scissors</button>
+        <button onclick="playRound(`scissors`)">Scissors</button><br>
+        <button id="shotgun" onclick="playRound(`shotgun`)">Shotgun</button>
     </div>
-    <div id="outcome">This is where the outcome will be shown</div>
+    <div id="outcome">Please chose an option</div>
     <div id="scoreboard">
         <div id="scoreboard top">
             <div>User Score - </div><div id="userScore">0</div>
@@ -23,6 +24,10 @@
             <div>Computer Score - </div><div id="computerScore">0</div>
         </div>
     </div>
+
+    <!-- This tag is part of the silly feature mentioned in script2.js line 9-->
+    <iframe id="ytVideo"  src="https://www.youtube.com/embed/ND4fd6yScBM"></iframe>
+    
 <script src="script2.js"></script>
 </body>
 </html>

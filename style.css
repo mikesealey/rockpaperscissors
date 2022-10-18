@@ -1,11 +1,9 @@
 
 
 html {
-    background-color: pink;
+    background-color: navy;
     color: white;
     text-align: center;
-
-
 }
 
 h1 {
@@ -50,4 +48,10 @@ button {
 .scoreboard.result {
     text-align: center;
     color: grey;
+}
+
+#shotgun {
+    position: relative;
+    align-items: left;
+    opacity: 5%;
 }
